@@ -32,7 +32,7 @@
         <tbody class="table-striped">
         <c:forEach items="${list}" var="ttf">
             <tr>
-                <td class="p-2">${ttf.getDate()}</td>
+                <td class="p-2" title="Trading Day">${ttf.getDate()}</td>
                 <td class="p-2">${ttf.getMonthPlusOne()}</td>
                 <td class="p-2">${ttf.getMonthPlusTwo()}</td>
                 <td class="p-2">${ttf.getMonthPlusThree()}</td>
