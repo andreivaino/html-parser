@@ -1,11 +1,6 @@
-<%@ page import="org.springframework.context.ApplicationContext" %>
-<%@ page import="org.springframework.web.servlet.support.RequestContextUtils" %>
 <%@ page isELIgnored="false" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<% ApplicationContext context = RequestContextUtils.findWebApplicationContext(request); %>
 <!DOCTYPE html>
 <html>
 <head>
