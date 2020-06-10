@@ -3,9 +3,6 @@ package ee.grabber.app.powernext.service;
 import ee.grabber.app.powernext.domain.TTF;
 import ee.grabber.app.powernext.repository.TTFRepository;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
 
 @Service
