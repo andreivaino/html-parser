@@ -14,7 +14,7 @@
 <body>
 <div class="container">
     <p class="h3">TTF Data (Last Refresh: <c:out value="${refresh}"/>)</p>
-    <table class="table">
+    <table class="table table-hover">
         <thead class="thead-dark">
         <tr>
             <th class="p-2">Trading Day</th>
