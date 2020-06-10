@@ -33,15 +33,15 @@
         <c:forEach items="${list}" var="ttf">
             <tr>
                 <td class="p-2" title="Trading Day">${ttf.getDate()}</td>
-                <td class="p-2">${ttf.getMonthPlusOne()}</td>
-                <td class="p-2">${ttf.getMonthPlusTwo()}</td>
-                <td class="p-2">${ttf.getMonthPlusThree()}</td>
-                <td class="p-2">${ttf.getMonthPlusFour()}</td>
-                <td class="p-2">${ttf.getMonthPlusFive()}</td>
-                <td class="p-2">${ttf.getQuarterPlusOne()}</td>
-                <td class="p-2">${ttf.getQuarterPlusTwo()}</td>
-                <td class="p-2">${ttf.getQuarterPlusThree()}</td>
-                <td class="p-2">${ttf.getQuarterPlusFour()}</td>
+                <td class="p-2" title="Month+1">${ttf.getMonthPlusOne()}</td>
+                <td class="p-2" title="Month+2">${ttf.getMonthPlusTwo()}</td>
+                <td class="p-2" title="Month+3">${ttf.getMonthPlusThree()}</td>
+                <td class="p-2" title="Month+4">${ttf.getMonthPlusFour()}</td>
+                <td class="p-2" title="Month+5">${ttf.getMonthPlusFive()}</td>
+                <td class="p-2" title="Quarter+1">${ttf.getQuarterPlusOne()}</td>
+                <td class="p-2" title="Quarter+2">${ttf.getQuarterPlusTwo()}</td>
+                <td class="p-2" title="Quarter+3">${ttf.getQuarterPlusThree()}</td>
+                <td class="p-2" title="Quarter+4">${ttf.getQuarterPlusFour()}</td>
             </tr>
         </c:forEach>
         </tbody>
