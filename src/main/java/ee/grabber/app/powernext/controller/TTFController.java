@@ -37,16 +37,15 @@ public class TTFController {
   public ModelAndView getAllTTF()
       throws KeyManagementException, NoSuchAlgorithmException, KeyStoreException, IOException {
     String refreshed = LocalDateTime.now().toString();
-    log.info(String.format("Refreshed: %s", refreshed));
     ArrayList<ArrayList<String>> data = grabberService.getData();
     ArrayList<TTF> ttfs = ttfParser.parseArrayListOfStringArrayListsToTTFArrayList(data);
     ttfService.saveList(ttfs);
     ModelAndView index = new ModelAndView("index");
+    log.info(String.format("Refreshed: %s", refreshed));
     index.addObject("refresh", refreshed);
     Collections.reverse(ttfs);
     index.addObject("list", ttfs);
     return index;
-
   }
 
 }
