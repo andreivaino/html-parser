@@ -37,7 +37,7 @@ public class GrabberService {
     this.environment = environment;
   }
 
-  public ArrayList<ArrayList<String>> getData()
+  public ArrayList<ArrayList<String>> getDataTTF()
       throws IOException, KeyStoreException, NoSuchAlgorithmException, KeyManagementException {
     Elements tbodyRow = getHtmlElements();
     ArrayList<ArrayList<String>> arrayLists = new ArrayList<>();

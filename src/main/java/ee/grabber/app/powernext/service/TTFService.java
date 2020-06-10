@@ -3,6 +3,7 @@ package ee.grabber.app.powernext.service;
 import ee.grabber.app.powernext.domain.TTF;
 import ee.grabber.app.powernext.repository.TTFRepository;
 import java.util.ArrayList;
+import java.util.List;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -18,6 +19,10 @@ public class TTFService {
     ttfList.stream()
         .filter(ttf -> !ttfRepository.existsById(ttf.getDate()))
         .forEach(ttfRepository::saveAndFlush);
+  }
+
+  public List<TTF> getList() {
+    return ttfRepository.findAll();
   }
 
 }

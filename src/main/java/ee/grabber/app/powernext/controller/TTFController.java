@@ -11,6 +11,7 @@ import java.security.NoSuchAlgorithmException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -37,14 +38,15 @@ public class TTFController {
   public ModelAndView getAllTTF()
       throws KeyManagementException, NoSuchAlgorithmException, KeyStoreException, IOException {
     String refreshed = LocalDateTime.now().toString();
-    ArrayList<ArrayList<String>> data = grabberService.getData();
+    ArrayList<ArrayList<String>> data = grabberService.getDataTTF();
     ArrayList<TTF> ttfs = ttfParser.parseArrayListOfStringArrayListsToTTFArrayList(data);
     ttfService.saveList(ttfs);
     ModelAndView index = new ModelAndView("index");
     log.info(String.format("Refreshed: %s", refreshed));
     index.addObject("refresh", refreshed);
-    Collections.reverse(ttfs);
-    index.addObject("list", ttfs);
+    List<TTF> ttfListFromBase = ttfService.getList();
+    Collections.reverse(ttfListFromBase);
+    index.addObject("list", ttfListFromBase);
     return index;
   }
 
